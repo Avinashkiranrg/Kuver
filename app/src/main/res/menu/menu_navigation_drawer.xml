@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/grp2" android:checkableBehavior="single" >
+        <item
+            android:id="@+id/person"
+            android:icon="@drawable/ic_person"
+            android:title="Home" />
+        <item
+            android:id="@+id/Search"
+            android:icon="@drawable/ic_search"
+            android:title="Search" />
+       <!-- <item
+            android:id="@+id/AllCourse"
+            android:icon="@drawable/ic_allcourse"
+            android:title="AllCourse" />
+        <item
+            android:id="@+id/Account"
+            android:icon="@drawable/ic_account"
+            android:title="Account" />-->
+    </group>
+
+</menu>

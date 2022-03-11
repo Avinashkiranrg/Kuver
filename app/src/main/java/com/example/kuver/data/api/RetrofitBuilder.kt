@@ -8,6 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 object RetrofitBuilder {
     private const val BASE_URL = "http://maplenestinc.ca/tokh/services/"
+   // private const val BASE_URL = "https://tokhapp.com/services/"
     private fun getRetrofit() = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(add())
@@ -26,8 +27,6 @@ object RetrofitBuilder {
 
     }
 
-
     val apiService: ApiService = getRetrofit().create(ApiService::class.java)
-
 
 }

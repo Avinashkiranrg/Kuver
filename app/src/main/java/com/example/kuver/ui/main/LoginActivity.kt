@@ -61,6 +61,9 @@ class LoginActivity : AppCompatActivity() {
                             intent.putExtra("passcode", binding.passcode.text.toString())
                             ActivityUtil.startActivity(this@LoginActivity, intent, true)
                             renderLoginUser(it.response)
+
+                            Log.e("LoginDetails","Login" + it.response.base_path + it.response.user_details?.profile_pic)
+
                         }else{
                             Toast.makeText(this@LoginActivity,it.response.message,Toast.LENGTH_SHORT).show()
                         }

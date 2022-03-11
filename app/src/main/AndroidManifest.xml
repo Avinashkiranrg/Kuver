@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.kuver" >
+    package="com.example.kuver">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kuver"
-        android:usesCleartextTraffic="true" >
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".ui.main.SignUpActivity"
             android:exported="false" />
@@ -23,11 +22,12 @@
             android:name=".ui.main.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.HomeActivity"
+            android:name=".ui.main.SplashActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.SplashActivity"
-            android:exported="true" >
+
+            android:name=".ui.main.HomeActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
