@@ -3,15 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Kuver/app/src/main/res/drawable/ic_menu.xml" value="0.21384615384615385" />
+        <entry key="..\:/Kuver/app/src/main/res/drawable/ic_moped.xml" value="0.225" />
         <entry key="..\:/Kuver/app/src/main/res/drawable/ic_person.xml" value="0.23333333333333334" />
-        <entry key="..\:/Kuver/app/src/main/res/layout/activity_home.xml" value="0.12708333333333333" />
+        <entry key="..\:/Kuver/app/src/main/res/drawable/transparent_background.xml" value="0.21384615384615385" />
+        <entry key="..\:/Kuver/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Kuver/app/src/main/res/layout/activity_login.xml" value="0.2359375" />
         <entry key="..\:/Kuver/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Kuver/app/src/main/res/layout/activity_sign_up.xml" value="0.245018115942029" />
         <entry key="..\:/Kuver/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/Kuver/app/src/main/res/layout/activity_welcome.xml" value="0.25" />
+        <entry key="..\:/Kuver/app/src/main/res/layout/fragment_home.xml" value="0.2269021739130435" />
         <entry key="..\:/Kuver/app/src/main/res/layout/layout_appbar_empty.xml" value="0.23143115942028986" />
         <entry key="..\:/Kuver/app/src/main/res/layout/nav_header_main.xml" value="0.23143115942028986" />
+        <entry key="..\:/Kuver/app/src/main/res/menu/bottom_navigation.xml" value="0.20104166666666667" />
         <entry key="..\:/Kuver/app/src/main/res/menu/menu_navigation_drawer.xml" value="0.25" />
       </map>
     </option>
