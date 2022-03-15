@@ -1,4 +1,4 @@
-package com.example.kuver.ui.main
+package com.example.kuver.ui.main.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,6 +13,7 @@ import com.example.kuver.data.api.ApiHelperImpl
 import com.example.kuver.data.api.RetrofitBuilder
 import com.example.kuver.data.model.LoginResponse
 import com.example.kuver.databinding.ActivityLoginBinding
+import com.example.kuver.ui.main.home.HomeActivity
 import com.example.kuver.ui.main.intent.MainIntent
 import com.example.kuver.ui.main.viewModel.LoginViewModel
 import com.example.kuver.ui.main.viewState.MainState

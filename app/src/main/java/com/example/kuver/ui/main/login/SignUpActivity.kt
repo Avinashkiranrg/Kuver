@@ -1,4 +1,4 @@
-package com.example.kuver.ui.main
+package com.example.kuver.ui.main.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.lifecycleScope
-import com.airbnb.lottie.parser.IntegerParser
 import com.example.kuver.Utils.ActivityUtil
 import com.example.kuver.data.api.ApiHelperImpl
 import com.example.kuver.data.api.RetrofitBuilder
 import com.example.kuver.databinding.ActivitySignUpBinding
+import com.example.kuver.ui.main.home.HomeActivity
 import com.example.kuver.ui.main.intent.MainIntent
 import com.example.kuver.ui.main.viewModel.RegisterViewModel
 import com.example.kuver.ui.main.viewState.MainState
@@ -65,7 +65,7 @@ class SignUpActivity : AppCompatActivity() {
 
         binding.alloginTxt.setOnClickListener {
 
-            val intent = Intent(this@SignUpActivity,LoginActivity::class.java)
+            val intent = Intent(this@SignUpActivity, LoginActivity::class.java)
             ActivityUtil.startActivity(this@SignUpActivity,intent,true)
         }
     }
@@ -87,7 +87,7 @@ class SignUpActivity : AppCompatActivity() {
 
                         if(it.responseRegister.status.equals("1")){
 
-                          val intent = Intent(this@SignUpActivity,HomeActivity::class.java)
+                          val intent = Intent(this@SignUpActivity, HomeActivity::class.java)
                             ActivityUtil.startActivity(this@SignUpActivity,intent,true)
                             Toast.makeText(this@SignUpActivity,it.responseRegister.message,Toast.LENGTH_SHORT).show()
 

@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.HomeActivity">
+    tools:context=".ui.main.home.HomeActivity">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -57,17 +57,15 @@
             android:id="@+id/layout_main"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            tools:layout_editor_absoluteX="0dp" />
+            app:layout_constraintBottom_toTopOf="@+id/bottomAppBar"
+            app:layout_constraintTop_toBottomOf="@+id/appbar" />
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottomAppBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            app:layout_constraintBottom_toBottomOf="@+id/layout_main"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="BottomAppBar,MissingConstraints">
@@ -79,5 +77,7 @@
                 app:menu="@menu/bottom_navigation" />
 
         </com.google.android.material.bottomappbar.BottomAppBar>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

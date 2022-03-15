@@ -1,4 +1,4 @@
-package com.example.kuver.ui.main
+package com.example.kuver.ui.main.login
 
 import android.os.Bundle
 import android.os.Handler

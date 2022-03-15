@@ -1,23 +1,13 @@
-package com.example.kuver.ui.main
+package com.example.kuver.ui.main.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Layout
-import android.text.SpannableString
-import android.text.style.AlignmentSpan
-import android.view.LayoutInflater
-import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.kuver.R
+import com.example.kuver.Utils.Constants.HOME_FRAGMENT
 import com.example.kuver.databinding.ActivityHomeBinding
-import com.example.kuver.databinding.ActivityLoginBinding
-import com.example.kuver.ui.main.fragment.HomeFragment
-import com.google.android.material.navigation.NavigationView
 
 class HomeActivity : AppCompatActivity() {
 
@@ -31,11 +21,11 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setUpViews()
+        setUpHome()
 
     }
 
     private fun setUpViews() {
-
         setUpDrawerLayout()
     }
 
@@ -54,4 +44,17 @@ class HomeActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    private fun setUpHome() {
+
+        fragmentTransition(HomeFragment.newInstance(), HOME_FRAGMENT)
+    }
+
+    protected fun fragmentTransition(fragment: Fragment?, tag: String?) {
+        if (fragment != null && !fragment.isVisible) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.layout_main, fragment, tag)
+                .addToBackStack(null)
+                .commit()
+        }
+    }
 }

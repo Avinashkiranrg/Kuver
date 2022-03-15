@@ -13,20 +13,20 @@
         android:theme="@style/Theme.Kuver"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.main.SignUpActivity"
+            android:name=".ui.main.login.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.LoginActivity"
+            android:name=".ui.main.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.WelcomeActivity"
+            android:name=".ui.main.login.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.SplashActivity"
+            android:name=".ui.main.login.SplashActivity"
             android:exported="false" />
         <activity
 
-            android:name=".ui.main.HomeActivity"
+            android:name=".ui.main.home.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
