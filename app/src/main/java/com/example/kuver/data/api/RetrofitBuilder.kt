@@ -3,6 +3,7 @@ package com.example.kuver.data.api
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 
@@ -12,7 +13,7 @@ object RetrofitBuilder {
     private fun getRetrofit() = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(add())
-        .addConverterFactory(MoshiConverterFactory.create())
+        .addConverterFactory(GsonConverterFactory.create())
         .build()
 
 

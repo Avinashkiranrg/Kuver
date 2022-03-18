@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.consumeAsFlow
 import kotlinx.coroutines.launch
 
 class LoginViewModel(
-    private val repository: MainRepository
+    private val     repository: MainRepository
 ) : ViewModel() {
 
     val loginIntent = Channel<MainIntent>(Channel.UNLIMITED)

@@ -22,7 +22,6 @@ class HomeActivity : AppCompatActivity() {
 
         setUpViews()
         setUpHome()
-
     }
 
     private fun setUpViews() {

@@ -1,18 +1,31 @@
 package com.example.kuver.data.api
 
-import com.example.kuver.data.model.LoginRequest
-import com.example.kuver.data.model.LoginResponse
-import com.example.kuver.data.model.RegistrationRequestModel
-import com.example.kuver.data.model.RegistrationResponseModel
+import com.example.kuver.data.model.*
 
-class ApiHelperImpl(private val apiService: ApiService):ApiHelper {
+class ApiHelperImpl(private val apiService: ApiService) : ApiHelper {
 
-    override suspend fun loginRequest(responseModel: LoginRequest): LoginResponse {
-        return apiService.getLoginRequest(responseModel)
+    override suspend fun loginRequest(loginRequest: LoginRequest): LoginResponse {
+        return apiService.getLoginRequest(loginRequest)
     }
 
-    override suspend fun getRegistration(responseRegistration: RegistrationRequestModel): RegistrationResponseModel {
-        return apiService.getRegistration(responseRegistration)
+    override suspend fun getRegistration(registrationRequest: RegistrationRequestModel): RegistrationResponseModel {
+        return apiService.getRegistration(registrationRequest)
+    }
+
+    override suspend fun getCategory(catRequest: CatRequestModel): CatResponseModel {
+        return apiService.getCategory(catRequest.`API-KEY`, catRequest.lang)
+    }
+
+    override suspend fun getSubCategary(subCatRequestModel: SubCatRequestModel): SubCatResponseModel {
+        return apiService.getSubCategory(
+            subCatRequestModel.`API-KEY`,
+            subCatRequestModel.lang,
+            subCatRequestModel.category_id
+        )
+    }
+
+    override suspend fun getCities(citiesRequestModel: CitiesRequestModel): CitiesResponseModel {
+        return apiService.getCities(citiesRequestModel.`API-KEY`, citiesRequestModel.lang)
     }
 
 }

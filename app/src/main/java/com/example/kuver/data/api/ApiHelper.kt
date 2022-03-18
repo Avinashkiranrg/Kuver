@@ -1,13 +1,16 @@
 package com.example.kuver.data.api
 
-import com.example.kuver.data.model.LoginRequest
-import com.example.kuver.data.model.LoginResponse
-import com.example.kuver.data.model.RegistrationRequestModel
-import com.example.kuver.data.model.RegistrationResponseModel
+import com.example.kuver.data.model.*
 
 interface ApiHelper {
 
-    suspend fun loginRequest(responseModel : LoginRequest):LoginResponse
+    suspend fun loginRequest(loginRequest: LoginRequest): LoginResponse
 
-    suspend fun getRegistration(responseRegistration : RegistrationRequestModel):RegistrationResponseModel
+    suspend fun getRegistration(registrationRequest: RegistrationRequestModel): RegistrationResponseModel
+
+    suspend fun getCategory(catRequest: CatRequestModel): CatResponseModel
+
+    suspend fun getSubCategary(subCatRequestModel: SubCatRequestModel): SubCatResponseModel
+
+    suspend fun getCities(citiesRequestModel: CitiesRequestModel): CitiesResponseModel
 }
