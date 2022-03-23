@@ -26,7 +26,7 @@ data class HomeRequestModel(
     val latitude: String = "",
 
     @Json(name = "longitude")
-    val longitude: String = ""
+    val longitude: String = "",
 
 
 )
