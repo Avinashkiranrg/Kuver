@@ -26,6 +26,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cat_recycleView" />
 
     <LinearLayout
+        android:id="@+id/linearlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
        android:layout_margin="10dp"
@@ -89,6 +90,11 @@
             android:focusable="false" />
 
     </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/products_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linearlayout"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
