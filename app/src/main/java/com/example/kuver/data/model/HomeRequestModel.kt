@@ -28,5 +28,11 @@ data class HomeRequestModel(
     @Json(name = "longitude")
     val longitude: String = "",
 
+    @Json(name = "order_by")
+    val order_by: String = "",
+
+    @Json(name = "page")
+    val page: String = "",
+
 
 )

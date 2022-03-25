@@ -29,7 +29,17 @@ class ApiHelperImpl(private val apiService: ApiService) : ApiHelper {
     }
 
     override suspend fun getHomeItems(homeRequestModel: HomeRequestModel): HomeResponseModel {
-        TODO("Not yet implemented")
+        return apiService.getHomeItems(
+            homeRequestModel.`API-KEY`,
+            homeRequestModel.lang,
+            homeRequestModel.category_id,
+            homeRequestModel.sub_category_id,
+            homeRequestModel.post_type,
+            homeRequestModel.city_id,
+            homeRequestModel.latitude,
+            homeRequestModel.longitude,
+            homeRequestModel.order_by,
+            homeRequestModel.page,
+        )
     }
-
 }
