@@ -13,6 +13,8 @@ import com.example.kuver.data.api.ApiHelperImpl
 import com.example.kuver.data.api.RetrofitBuilder
 import com.example.kuver.data.model.LoginResponse
 import com.example.kuver.databinding.ActivityLoginBinding
+import com.example.kuver.local.DatabaseBuilder
+import com.example.kuver.local.DatabaseHelperImpl
 import com.example.kuver.ui.main.home.HomeActivity
 import com.example.kuver.ui.main.intent.MainIntent
 import com.example.kuver.ui.main.viewModel.LoginViewModel
@@ -89,7 +91,7 @@ class LoginActivity : AppCompatActivity() {
 
         loginViewModel = ViewModelProviders.of(
             this, ViewModelFactory(
-                ApiHelperImpl(RetrofitBuilder.apiService)
+                ApiHelperImpl(RetrofitBuilder.apiService), DatabaseHelperImpl(DatabaseBuilder.getInstance(this))
             )
         ).get(LoginViewModel::class.java)
 

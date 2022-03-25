@@ -13,4 +13,6 @@ interface ApiHelper {
     suspend fun getSubCategary(subCatRequestModel: SubCatRequestModel): SubCatResponseModel
 
     suspend fun getCities(citiesRequestModel: CitiesRequestModel): CitiesResponseModel
+
+    suspend fun getHomeItems(homeRequestModel: HomeRequestModel):HomeResponseModel
 }

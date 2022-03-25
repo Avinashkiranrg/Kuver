@@ -6,6 +6,8 @@ import com.example.kuver.data.model.CatRequestModel
 import com.example.kuver.data.model.CitiesRequestModel
 import com.example.kuver.data.model.SubCatRequestModel
 import com.example.kuver.data.repository.MainRepository
+import com.example.kuver.local.entity.CatDBModel
+import com.example.kuver.local.repository.DbRepository
 import com.example.kuver.ui.main.intent.MainIntent
 import com.example.kuver.ui.main.viewState.MainState
 import kotlinx.coroutines.channels.Channel
@@ -17,13 +19,15 @@ import kotlinx.coroutines.launch
 
 class CategoryViewModel(
 
-    private val repository: MainRepository
+    private val repository: MainRepository,
+    private val dbRepository: DbRepository
 ) : ViewModel() {
 
     val catIntent = Channel<MainIntent>(Channel.UNLIMITED)
     private val _state = MutableStateFlow<MainState>(MainState.Idel)
     val state: StateFlow<MainState>
         get() = _state
+
 
     init {
         handleIntent()
@@ -68,7 +72,26 @@ class CategoryViewModel(
             _state.value = MainState.Loading
             _state.value = try {
                 val request = CatRequestModel("9876543", "en")
-                MainState.CatagoryStatus(repository.getCatRequest(request))
+                val catDb = dbRepository.getAll()
+                var addData: List<CatDBModel>
+
+                if (catDb.isEmpty()) {
+                    val apiResponse = repository.getCatRequest(request)
+                    val catDataList = mutableListOf<CatDBModel>()
+
+                    for (data in apiResponse.categories!!) {
+
+                        val cat = CatDBModel(data.id, data.category_name, data.image, data.status)
+
+                        catDataList.add(cat)
+                    }
+                    dbRepository.insertAll(catDataList)
+
+                    addData = catDataList
+                } else {
+                    addData = catDb
+                }
+                MainState.CatagoryStatus(addData)
 
             } catch (e: Exception) {
                 MainState.Error(e.localizedMessage)

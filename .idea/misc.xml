@@ -3,8 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Kotlin/Kuver/app/src/main/res/layout/fragment_home.xml" value="0.12158054711246201" />
-        <entry key="..\:/Kotlin/Kuver/app/src/main/res/layout/products_layout.xml" value="0.152" />
         <entry key="..\:/Kuver/app/src/main/res/drawable/custom_shap.xml" value="0.23148148148148148" />
         <entry key="..\:/Kuver/app/src/main/res/drawable/drop_arrow.xml" value="0.23148148148148148" />
         <entry key="..\:/Kuver/app/src/main/res/drawable/ic_check_circle.xml" value="0.23148148148148148" />
@@ -26,6 +24,7 @@
         <entry key="..\:/Kuver/app/src/main/res/layout/layout_spinner_hint.xml" value="0.2427536231884058" />
         <entry key="..\:/Kuver/app/src/main/res/layout/layout_spinner_plain.xml" value="0.2427536231884058" />
         <entry key="..\:/Kuver/app/src/main/res/layout/nav_header_main.xml" value="0.23143115942028986" />
+        <entry key="..\:/Kuver/app/src/main/res/layout/products_layout.xml" value="0.2246376811594203" />
         <entry key="..\:/Kuver/app/src/main/res/layout/sub_cat_row.xml" value="0.21195652173913043" />
         <entry key="..\:/Kuver/app/src/main/res/layout/sub_cat_rowlayout.xml" value="0.21195652173913043" />
         <entry key="..\:/Kuver/app/src/main/res/menu/bottom_navigation.xml" value="0.20104166666666667" />

@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kuver.data.model.Categories
 import com.example.kuver.databinding.CatLayoutBinding
+import com.example.kuver.local.entity.CatDBModel
 
 class CatAdapter(
 
     //  var context: Context,
-    var items: List<Categories>?,
+    var items: List<CatDBModel>?,
     private var onCategoryClick: OnCategoryClick,
 
     var value: Int = 0,
@@ -30,9 +31,7 @@ class CatAdapter(
         holder.bindView(items!!.get(position), position, value)
 
         Log.e("position", position.toString())
-        if (position == 0) {
-            onCategoryClick.OnItemClick(position, items!!.get(position).id)
-        }
+
         holder.itemView.setOnClickListener {
             if (items != null) {
                 value = position
@@ -55,7 +54,7 @@ class CatAdapter(
 
         private var binding = itemView
 
-        fun bindView(items: Categories, position: Int, value: Int) {
+        fun bindView(items: CatDBModel, position: Int, value: Int) {
 
             binding.name.setText(items.category_name)
 
@@ -71,7 +70,7 @@ class CatAdapter(
         }
     }
 
-    fun setList(items: List<Categories>?) {
+    fun setList(items: List<CatDBModel>?) {
         this.items = items
         notifyDataSetChanged()
     }
